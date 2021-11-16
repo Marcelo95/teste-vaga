@@ -1,5 +1,11 @@
 <?php
 
+if(DB::connection()->getDatabaseName())
+{
+   echo "Connected to database ".DB::connection()->getDatabaseName();
+}
+$response->send();
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
