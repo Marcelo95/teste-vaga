@@ -57,6 +57,9 @@ $kernel->terminate($request, $response);
 
 
 
+echo "teste conexao";
+
+
 if(DB::connection()->getDatabaseName())
 {
    echo "Connected to database ".DB::connection()->getDatabaseName();
