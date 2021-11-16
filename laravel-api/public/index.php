@@ -57,7 +57,7 @@ if(DB::connection()->getDatabaseName())
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
-te
+
 
 $kernel->terminate($request, $response);
 
