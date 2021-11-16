@@ -49,19 +49,17 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
+if(DB::connection()->getDatabaseName())
+{
+   echo "Connected to database ".DB::connection()->getDatabaseName();
+}
+
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
+te
 
 $kernel->terminate($request, $response);
 
 
 
-echo "teste conexao";
-
-
-if(DB::connection()->getDatabaseName())
-{
-   echo "Connected to database ".DB::connection()->getDatabaseName();
-}
-$response->send();
