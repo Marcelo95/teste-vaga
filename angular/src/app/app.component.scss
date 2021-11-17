@@ -1,0 +1,44 @@
+.center{
+    max-width: 900px;
+        margin: auto;
+}
+.padding {
+    padding: 0 15px;
+}
+
+
+ul.news {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
+    li {
+        margin: 10px;
+        list-style: none;
+        width: 100%;
+    }
+
+    .resume {
+        color: #000;
+    }
+
+
+    small {
+        color: #00000069;
+    }
+
+    li a {
+        color: #3f51b5;
+        text-decoration: none;
+    
+        :hover:not(small) {
+            color: #232b58;
+            
+        }
+    }
+
+    li img{
+        max-width: 100%;
+    }
+}
