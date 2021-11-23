@@ -18,3 +18,4 @@ artifacts:
   base-directory: '.'
   files:
     - 'angular/dist/angular/*'
+  name: $angular-$(date +%Y-%m-%d) 
