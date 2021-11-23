@@ -1,21 +1,15 @@
 version: 0.2
 
 phases:
-  pre_build:
+  build:
     commands:
       - echo Install packages...
       - cd angular
       - npm install
-  build:
-    commands:
       - echo Create build...
       - npm run build
-  post_build:
-    commands:
       - echo Removing unnecessary files...
-      - rm -rf node_modules/
+      - rm -rf node_modules/   
 artifacts:
-  base-directory: '.'
   files:
     - 'angular/dist/angular/*'
-  name: angular-projetc-$(date +%Y-%m-%d) 
