@@ -4,16 +4,17 @@ phases:
   pre_build:
     commands:
       - echo Install packages...
-      - cd angular && npm install
+      - cd angular
+      - npm install
   build:
     commands:
       - echo Create build...
-      - cd angular && npm run build
+      - npm run build
   post_build:
     commands:
       - echo Removing unnecessary files...
-      - cd angular && rm -rf node_modules/
+      - rm -rf node_modules/
 artifacts:
-  base-directory: 'angular/dist/angular'
+  base-directory: '.'
   files:
-    - '**/*'
+    - 'angular/dist/angular/*'
