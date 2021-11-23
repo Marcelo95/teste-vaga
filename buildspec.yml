@@ -14,6 +14,6 @@ phases:
       - echo Removing unnecessary files...
       - cd angular && rm -rf node_modules/
 artifacts:
-  base-directory: './dist/angular'
+  base-directory: 'angular/dist/angular'
   files:
     - '**/*'
